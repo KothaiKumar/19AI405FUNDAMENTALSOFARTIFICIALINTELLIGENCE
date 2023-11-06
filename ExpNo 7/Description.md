@@ -1,12 +1,12 @@
 <h1>ExpNo 7 : Solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python</h1> 
-<h3>Name: Saravanan N</h3>
-<h3>Register Number/Staff Id: TSML006</h3>
+<h3>Name: Kothai K</h3>
+<h3>Register Number: 212222240051</h3>
 <H3>Aim:</H3>
 <p>
     To solve Cryptarithmetic Problem,a CSP(Constraint Satisfaction Problem) using Python
 </p>
 <h3>Procedure:</h3>
-Input and Output
+
 <br>Input:
 This algorithm will take three words.
 <br> B A S E<br>
@@ -77,6 +77,42 @@ SEND = 9567<br>
 MORE = 1085<br>
 <hr>
 MONEY = 10652<br>
-<hr>
+
+## Program:
+```python
+from itertools import permutations
+def solve_cryptarithmetic():
+    for perm in permutations(range(10), 8):
+        S, E, N, D, M, O, R, Y = perm
+        # Check for leading zeros
+        if S == 0 or M == 0:
+            continue
+        # Check the equation constraints
+        SEND = 1000 * S + 100 * E + 10 * N + D
+        MORE = 1000 * M + 100 * O + 10 * R + E
+        MONEY = 10000 * M + 1000 * O + 100 * N + 10 * E + Y
+        if SEND + MORE == MONEY:
+            return SEND, MORE, MONEY
+    return None
+solution = solve_cryptarithmetic()
+if solution:
+    SEND, MORE, MONEY = solution
+    print(f'SEND = {SEND}')
+    print(f'MORE = {MORE}')
+    print(f'MONEY = {MONEY}')
+else:
+    print("No solution found.")
+```
+## Input and Output
+Input: This algorithm will take three words.
+B A S E
+B A L L
+----------
+G A M E S
+
+OUTPUT:
+![image](https://github.com/KothaiKumar/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/121215739/8ee4a4fc-9322-4982-abd2-bfe896bd1f9e)
+
+
 <h2>Result:</h2>
 <p> Thus a Cryptarithmetic Problem was solved using Python successfully</p>
