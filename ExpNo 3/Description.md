@@ -217,7 +217,8 @@ E 7 <br>
 D 1 <br>
 G 0 <br>
 <hr>
-<h2>Sample Output</h2>
+
+## Sample Output:
 ![image](https://github.com/KothaiKumar/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/121215739/034cfb47-563e-4817-a4b1-aa1a496d14c9)
 
 <hr>
